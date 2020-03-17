@@ -1,0 +1,14 @@
+.bg-login-purple {
+    background-color: #800080;
+}
+
+.btn-login-purple {
+    background-color: #800080;
+    color: white;
+}
+
+.btn-login-purple:hover {
+    background-color: white;
+    border-color: #800080;
+    color: #800080;
+}
