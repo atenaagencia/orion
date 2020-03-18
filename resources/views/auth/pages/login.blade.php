@@ -25,9 +25,19 @@
   body{
     height: 100vh;
   }
+
+  .full-height {
+    height: 100vh;
+  }
+
+  .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
 </style>
 
-<body class="bg-login-purple">
+<body class="bg-login-purple flex-center position-ref full-height">
 
   <div class="container">
 
