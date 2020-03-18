@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('auth.pages.login');
 });
 
+Route::post('/login', 'LoginController@login');
+Route::get('/logout', 'LoginController@logout');
+
 
 Route::get('/teste', function () {
     return view('admin.pages.index');

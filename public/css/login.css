@@ -12,3 +12,19 @@
     border-color: #800080;
     color: #800080;
 }
+
+.bg-login-m {
+    background-color: #800080b2;
+}
+
+.btn-login-m {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.btn-login-m:hover {
+    background-color: white;
+    border-color: white;
+    color: #800080;
+}

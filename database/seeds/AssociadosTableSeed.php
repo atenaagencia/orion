@@ -1,0 +1,42 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
+class AssociadosTableSeed extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('associados')->insert([
+            'nome'=>'Herbet Junior',
+            'cpf'=>'04261687550',
+            'rg'=>'1369825498',
+            'data_nasc'=>'1991-02-01',
+            'nome_mae'=>'Cassia',
+            'cep'=>'48903726',
+            'rua'=>'angari',
+            'bairro'=>'centro',
+            'numero'=>'22',
+            'cidade'=>'juazeiro',
+            'uf'=>'Bahia',
+            'email_pessoal'=>'herbetjr@gmail.com',
+            'email_inst'=>'herbetjr@atenaagencia.com',
+            'escolaridade'=>'Ensino Superior',
+            'instituicao'=>'IfSertao',
+            'turno_aula'=>null,
+            'area_formacao'=>null,
+            'especializacao'=> null,
+            'talentos'=>null,
+            'password'=> Hash::make('01072015')
+
+
+
+        ]);
+    }
+}

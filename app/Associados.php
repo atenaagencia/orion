@@ -16,7 +16,7 @@ class Associados extends Authenticatable
      * @var array
      */
     protected $fillable = [
-       
+        'nome', 'cpf', 'rg', 'data_nasc', 'nome_mae', 'cep', 'rua', 'bairro', 'numero', 'cidade', 'uf', 'email_pessoal', 'email_inst', 'escolaridade', 'instituicao', 'turno_aula', 'area_formacao', 'especializacao', 'talentos', 'password'
     ];
 
     /**
@@ -25,6 +25,6 @@ class Associados extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password'
     ];
 }

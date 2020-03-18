@@ -55,13 +55,15 @@
                 <div class="p-5">
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Bem-vindo de volta cavaleiro!</h1>
+          
                   </div>
-                  <form class="user" method="get" action="/teste">
+                  <form class="user" method="post" action="/login">
+                    @csrf
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Informe login">
+                    <input type="text"  name="cpf" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Informe login" value="{{old('cpf')}}">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Informe senha">
+                      <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Informe senha">
                     </div>
                     {{-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -108,7 +110,42 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  
+  @if ($errors->any()) 
+
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-login-m">
+        <div class="modal-header">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Algo deu errado!</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">  
+          <ul> 
+          @foreach ($errors->all() as $error)
+          
+              <li class="text-white">{{ $error }}</li>
+            @endforeach
+          </ul>
+          </div>
+        <div class="modal-footer">
+          <button class="btn btn-login-m" type="button" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @endif
+
+  <script>
+    $(document).ready(function () {
+      $('#logoutModal').modal();
+    })
+  </script>
 
 </body>
 
 </html>
+    
