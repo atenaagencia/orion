@@ -2,6 +2,23 @@
     background-color: #800080;
 }
 
+.text-purple {
+    color: #800080;
+    text-transform: none !important;
+}
+
+.btn-outline-purple {
+    background-color: white;
+    color: #800080;
+    border-color: #800080;
+}
+
+.btn-outline-purple:hover {
+    background-color: #800080;
+    color: white;
+    border-color: #800080;
+}
+
 .btn-purple {
     background-color: #800080;
     color: white;
