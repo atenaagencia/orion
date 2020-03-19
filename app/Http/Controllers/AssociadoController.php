@@ -25,7 +25,7 @@ class AssociadoController extends Controller
      */
     public function create()
     {
-        //
+        return view('associados.pages.create');
     }
 
     /**

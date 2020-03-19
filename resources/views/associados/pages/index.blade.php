@@ -1,12 +1,9 @@
-@extends('bases.app')
-
-@section('content')
-    <div class="container">
-        <h3>Associados</h3>
-         <div class="card shadow mb-4">
+@extends('associados.layouts.associado')
+@section('title', 'Associados')
+@section('pages_associado')
+     <div class="card shadow mb-4">
             <div class="card-header py-3 clearfix">
-              <h6 class="m-0 font-weight-bold text-primary float-left">Relação</h6>
-              <a href="" class="float-right"> Novo cadastro</a>
+            <a href="{{route('associado.create')}}" class="float-right btn btn-purple"> Novo cadastro</a>
            </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -33,7 +30,8 @@
                 </table>
               </div>
             </div>
-          </div>
-    </div>
-    
+     </div>
+             
+           
 @endsection
+ 

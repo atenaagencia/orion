@@ -1,3 +1,13 @@
 .bg-admin-purple {
     background-color: #800080;
 }
+
+.btn-purple {
+    background-color: #800080;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: #800080;
+    color: white;
+}
