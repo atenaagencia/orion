@@ -50,20 +50,23 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                <img src="/imagens/orion_logo_branca.png" alt="" class="" style="position:absolute; bottom:0px; width:40%;opacity:40%;">
+              </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
+                    
                     <h1 class="h4 text-gray-900 mb-4">Bem-vindo de volta cavaleiro!</h1>
           
                   </div>
-                  <form class="user" method="post" action="/login">
+                <form class="user" method="post" action="/login">
                     @csrf
                     <div class="form-group">
-                    <input type="text"  name="cpf" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Informe login" value="{{old('cpf')}}">
+                    <input type="text"  name="cpf" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Informe login" value="{{old('cpf')}}" required>
                     </div>
                     <div class="form-group">
-                      <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Informe senha">
+                      <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Informe senha" required>
                     </div>
                     {{-- <div class="form-group">
                       <div class="custom-control custom-checkbox small">

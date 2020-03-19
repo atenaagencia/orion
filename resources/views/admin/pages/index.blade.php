@@ -1,4 +1,4 @@
-@extends('bases.admin')
+@extends('bases.app')
 
 @section('content')
 <!-- Begin Page Content -->

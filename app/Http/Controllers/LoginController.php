@@ -19,6 +19,11 @@ class LoginController extends Controller
         return 'cpf';
     }
 
+    public function index()
+    {
+        return view('auth.pages.login');
+    }
+
     public function login(LoginPost $request)
     {
         $validated = $request->validated();
@@ -27,7 +32,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect('/teste');
+            return redirect('/home');
         }else{
             $validated = "Usuário ou senha inválido";
         }
