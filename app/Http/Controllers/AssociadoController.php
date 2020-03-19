@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Associados;
+use App\Associado;
 use Illuminate\Http\Request;
 
 class AssociadoController extends Controller
@@ -14,7 +14,7 @@ class AssociadoController extends Controller
      */
     public function index()
     {
-        $associados = Associados::all();
+        $associados = Associado::all();
         return view('associados.pages.index')->with(compact('associados'));
     }
 
@@ -36,27 +36,29 @@ class AssociadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $query = Associado::create($request->all());
+
+        return redirect(route('associado.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Associados  $associados
+     * @param  \App\Associado  $associado
      * @return \Illuminate\Http\Response
      */
-    public function show(Associados $associados)
+    public function show(Associado $associado)
     {
-        //
+        return view('associados.pages.show')->with(compact('associado'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Associados  $associados
+     * @param  \App\Associado  $associado
      * @return \Illuminate\Http\Response
      */
-    public function edit(Associados $associados)
+    public function edit(Associado $associado)
     {
         //
     }
@@ -65,10 +67,10 @@ class AssociadoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Associados  $associados
+     * @param  \App\Associado  $associado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Associados $associados)
+    public function update(Request $request, Associado $associado)
     {
         //
     }
@@ -76,10 +78,10 @@ class AssociadoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Associados  $associados
+     * @param  \App\Associado  $associado
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Associados $associados)
+    public function destroy(Associado $associado)
     {
         //
     }

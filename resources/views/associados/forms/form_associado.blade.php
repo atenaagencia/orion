@@ -81,7 +81,7 @@
      </div>
      <div class="col-sm-12 py-4">
          {!! Form::label('talentos', 'Talentos:', ['']) !!}
-         {!! Form::textarea('talentos', $value=null, ['class'=> ['form-control']]) !!}
+         {!! Form::textarea('talentos', $value=null, ['class'=> 'form-control', 'id'=>'editor']) !!}
      </div>
      <div class="col-sm-12 mt-3">    
          {!! Form::submit('Enviar', ['class' => ['btn', 'btn-purple', 'btn-user', 'btn-block', 'form-nonresize']]) !!}
@@ -90,3 +90,12 @@
 
 
 {!! Form::close() !!}
+
+<script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>

@@ -34,7 +34,7 @@ class CreateAssociadosTable extends Migration
             $table->string('area_formacao')->nullable();
             $table->string('especializacao')->nullable();
             $table->longText('talentos')->nullable();
-            $table->string('password');       
+            $table->string('password')->nullable();       
             $table->timestamps();
            
         });
