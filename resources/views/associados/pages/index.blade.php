@@ -1,5 +1,14 @@
 @extends('associados.layouts.associado')
+
+<style>
+  .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+</style>
 @section('title', 'Associados')
+
 @section('pages_associado')
 <div class="card shadow mb-4">
   <div class="card-header py-3 clearfix">
@@ -22,7 +31,7 @@
           <td>{{$associado->nome}}</td>
               <td>{{$associado->cpf}}</td>
               <td></td>
-          <td>
+          <td class="flex-center py-auto my-auto mx-auto">
           <div class="btn-group">
             <a href="{{route('associado.show',$associado->id)}}" class="btn-sm p-1 pl-3 pr-3 btn btn-outline-purple fa fa-eye"></a>
             <a href="{{route('associado.edit',$associado->id)}}" class="btn-sm p-1 pl-3 pr-3 btn btn-outline-purple fa fa-edit"></a>
