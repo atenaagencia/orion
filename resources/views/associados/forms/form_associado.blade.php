@@ -4,11 +4,10 @@
 {!! Form::model($associado,['class'=>'user','route' => ['associado.update',$associado->id]]) !!}
 @method('PUT')
 @endif
+<div class="container-fluid py-3">
+      <h3 class="font-weight-bold text-dark">Dados Pessoais</h3><hr>
+</div>
  <div class="form-group row">
-
-     <div class="container-fluid py-3">
-      <h3 class="font-weight-bold">Informações Pessoais</h3><hr>
-     </div>
      <div class="col-sm-4">
         {!! Form::label('nome', 'Nome:', ['']) !!}
         {!! Form::text('nome', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
@@ -62,7 +61,7 @@
          {!! Form::email('email_inst', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
      <div class="container-fluid py-3">
-      <h3 class="font-weight-bold">Formação Acadêmica</h3><hr>
+      <h3 class="font-weight-bold text-dark">Formação Acadêmica</h3><hr>
      </div>
      <div class="col-sm-4">
          {!! Form::label('escolaridade', 'Escolaridade:', ['']) !!}

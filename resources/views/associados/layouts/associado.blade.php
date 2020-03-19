@@ -6,3 +6,4 @@
         @yield('pages_associado')
     </div>  
 @endsection
+

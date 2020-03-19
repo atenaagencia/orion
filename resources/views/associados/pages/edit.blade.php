@@ -1,15 +1,27 @@
 @extends('associados.layouts.associado')
 
 @section('title', 'Associado | Editar')
-@section('pages_associado')
 
-<div class="card shadow mb-4">
-<div class="card-header py-3 clearfix">
-<h4 class="float-left">{{$associado->nome}}</h4>
-<a href="{{route('associado.index')}}" class="float-right btn btn-purple"> Voltar</a>
-</div>
-<div class="card-body">
-@include('associados.forms.form_associado')
-</div>
-</div>
+@section('pages_associado')
+<div class="card shadow mb-4 clearfix">
+    <div class="card-header clearfix">
+        <div class="row container-fluid mx-auto">
+            <div class="col-md-10 p-2">
+                <h2 class="text-dark font-weight-bold">{{$associado->nome}}</h2>
+                <div class="">CEO</div>
+                <div class="">Desenvolvedor</div>
+                <div class="">Desde 2019</div>
+            </div>
+            <div class="col-md-2 p-2 d-lg-block d-none">
+                <img class="border p-2 img-responsive" src="https://2.bp.blogspot.com/-c3xXGFDjNak/UEd_HcvsDuI/AAAAAAAAGcw/5KO5BHbRxnI/s1600/7.jpg" width="100%">
+                <div class="text-center"><a href="" class="btn btn-sm float-right text-purple"><i class="fa fa-edit"></i></a></div>
+            </div>
+        </div><!--container-fluid-->
+    </div>
+    <div class="card-body">
+        <div class="pl-3 pr-3">
+            @include('associados.forms.form_associado')
+        </div>
+    </div>
+</div><!--card-->
 @endsection
