@@ -72,7 +72,9 @@ class AssociadoController extends Controller
      */
     public function update(Request $request, Associado $associado)
     {
-        //
+        $associado->update($request->all());
+
+        return back();
     }
 
     /**
