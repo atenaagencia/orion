@@ -22,7 +22,10 @@
                     <td>{{$associado->nome}}</td>
                        <td>{{$associado->cpf}}</td>
                        <td></td>
-                    <td><a href="{{route('associado.show',$associado->id)}}">Show</a></td>                        
+                    <td>
+                      <a href="{{route('associado.show',$associado->id)}}">Show</a>
+                      <a href="{{route('associado.edit',$associado->id)}}">Edit</a>
+                    </td>                        
                     </tr>
                     @endforeach
                     

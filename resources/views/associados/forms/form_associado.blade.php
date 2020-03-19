@@ -1,4 +1,9 @@
+@if(isset($associado) == null)
 {!! Form::open(['route'=>'associado.store','class'=>'user']) !!}
+@else
+{!! Form::model($associado,['class'=>'user','route' => ['associado.update',$associado->id]]) !!}
+@method('PUT')
+@endif
  <div class="form-group row">
 
      <div class="container-fluid py-3">

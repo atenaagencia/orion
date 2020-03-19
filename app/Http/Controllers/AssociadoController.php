@@ -60,7 +60,7 @@ class AssociadoController extends Controller
      */
     public function edit(Associado $associado)
     {
-        //
+        return view('associados.pages.edit')->with(compact('associado'));
     }
 
     /**
