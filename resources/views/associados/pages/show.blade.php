@@ -21,7 +21,7 @@
 <div class="card-body">
 <div class="row">
     <div class="container-fluid mx-auto">
-    <h4 class="text-dark font-weight-bold">Dados Pessoais</h4>
+    <h4 class="text-dark font-weight-bold py-2">Dados Pessoais</h4>
         <div class="col-md-12 border p-2 mb-3">
             <div class=""><span class="font-weight-bold text-dark">Nome do Associado:</span> {{$associado->nome}}</div>
             <div class=""><span class="font-weight-bold text-dark">CPF:</span> {{$associado->cpf}}</div>
@@ -31,7 +31,7 @@
         </div>
     </div><!--container-fluid-->
     <div class="container-fluid mx-auto">
-    <h4 class="text-dark font-weight-bold">Endereço</h4>
+    <h4 class="text-dark font-weight-bold py-2">Endereço</h4>
         <div class="col-md-12 border p-2 mb-3">
             <div class=""><span class="font-weight-bold text-dark">CEP:</span> {{$associado->cep}}</div>
             <div class=""><span class="font-weight-bold text-dark">RUA:</span> {{$associado->rua}}</div>
@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="container-fluid mx-auto">
-    <h4 class="text-dark font-weight-bold">Dados Acadêmicos</h4>
+    <h4 class="text-dark font-weight-bold py-2">Dados Acadêmicos</h4>
         <div class="col-md-12 border p-2 mb-3">
             <div class=""><span class="font-weight-bold text-dark">ESCOLARIDADE:</span> {{$associado->escolaridade}}</div>
             <div class=""><span class="font-weight-bold text-dark">INSTITUIÇÃO:</span> {{$associado->instituicao}}</div>
@@ -55,6 +55,10 @@
         </div>
     </div>
 </div><!--end of row-->
+
+<div class="container-fluid">
+    <a class="btn btn-purple float-right" href="#"><i class="fa fa-print"></i> | Imprimir Ficha</a>
+</div>
 </div><!--card-body-->
 </div>
 @endsection
