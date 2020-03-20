@@ -1,6 +1,9 @@
 @extends('associados.layouts.associado')
 
 @section('title', 'Associado | Ficha')
+@section('edit')
+<a href="{{route('associado.edit',$associado->id)}}" class="btn btn-sm text-purple"><i class="fa fa-edit"></i></a>
+@endsection
 @section('pages_associado')
 
 <div class="card shadow mb-4">

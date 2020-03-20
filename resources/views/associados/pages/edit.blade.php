@@ -1,7 +1,9 @@
 @extends('associados.layouts.associado')
 
 @section('title', 'Associado | Editar')
-
+@section('edit')
+<a href="{{route('associado.show',$associado->id)}}" class="btn btn-sm text-purple"><i class="fa fa-arrow-left"></i></a>
+@endsection
 @section('pages_associado')
 <div class="card shadow mb-4 clearfix">
     <div class="card-header clearfix">
@@ -14,7 +16,7 @@
             </div>
             <div class="col-md-2 p-2 d-lg-block d-none">
                 <img class="border p-2 img-responsive" src="https://2.bp.blogspot.com/-c3xXGFDjNak/UEd_HcvsDuI/AAAAAAAAGcw/5KO5BHbRxnI/s1600/7.jpg" width="100%">
-                <div class="text-center"><a href="" class="btn btn-sm float-right text-purple"><i class="fa fa-edit"></i></a></div>
+              
             </div>
         </div><!--container-fluid-->
     </div>
