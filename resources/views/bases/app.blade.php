@@ -19,6 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin-2.css')}}" rel="stylesheet">
    <link href="{{asset('css/admin.css')}}" rel="stylesheet">
+      <link href="{{asset('css/config.css')}}" rel="stylesheet">
 
 </head>
 
@@ -135,7 +136,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="{{route('associado.show',Auth::user()->id)}}">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Perfil
                 </a>
@@ -193,17 +194,17 @@
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content bg-modal">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Tem que certeza que quer sair?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Selecione "Sair" abaixo se você estiver pronto para encerrar sua sessão atual.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="/logout">Logout</a>
+          <button class="btn text-white" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-modal" href="/logout">Sair</a>
         </div>
       </div>
     </div>
