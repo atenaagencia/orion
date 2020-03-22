@@ -29,6 +29,32 @@
     color: white;
 }
 
-.form-nonresize{
+.bg-modal {
+    background-color: #800080b2;
+    color: white;
+}
+
+.btn-modal {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.btn-modal:hover {
+    background-color: white;
+    border-color: white;
+    color: #800080;
+}
+
+.form-nonresize {
     resize: none !important;
+}
+
+.associado.nav-link.active {
+    background-color: #800080 !important;
+    color: white !important;
+}
+
+.associado.nav-link {
+    color: #800080 !important;
 }

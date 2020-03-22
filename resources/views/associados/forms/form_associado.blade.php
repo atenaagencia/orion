@@ -14,15 +14,15 @@
      </div>
       <div class="col-sm-4">
         {!! Form::label('cpf', 'CPF:', ['']) !!}
-        {!! Form::text('cpf', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+        {!! Form::number('cpf', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
       <div class="col-sm-4">
          {!! Form::label('rg', 'RG:', ['']) !!}
-         {!! Form::text('rg', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::number('rg', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('data_nasc', 'Data de Nascimento:', ['']) !!}
-         {!! Form::text('data_nasc', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::date('data_nasc', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('nome_mae', 'Nome da Mãe:', ['']) !!}
@@ -30,7 +30,7 @@
      </div>
      <div class="col-sm-4">
          {!! Form::label('cep', 'Cep:', ['']) !!}
-         {!! Form::text('cep', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::number('cep', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('rua', 'Rua:', ['']) !!}
@@ -42,7 +42,7 @@
      </div>
      <div class="col-sm-2">
          {!! Form::label('numero', 'Numero:', ['']) !!}
-         {!! Form::text('numero', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::number('numero', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
      <div class="col-sm-3">
          {!! Form::label('cidade', 'Cidade:', ['']) !!}
@@ -54,7 +54,7 @@
      </div>
      <div class="col-sm-4">
          {!! Form::label('email_pessoal', 'Email Pessoal:', ['']) !!}
-         {!! Form::text('email_pessoal', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::email('email_pessoal', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('email_inst', 'Email Institucional:', ['']) !!}
