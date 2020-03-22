@@ -5,7 +5,7 @@
 }
 
 .text-purple {
-    color: #800080;
+    color: #800080 !important;
     text-transform: none !important;
 }
 
@@ -57,14 +57,24 @@
     resize: none !important;
 }
 
-.text-black{
-    color: #202020 !important;
-
-.associado.nav-link.active {
+.associado.nav-link {
+    color: #800080 !important;
+}
+.associado.nav-link:active {
     background-color: #800080 !important;
     color: white !important;
 }
+.text-black{
+    color: #202020 !important;
+}
 
-.associado.nav-link {
-    color: #800080 !important;
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff !important;
+    background-color: #800080 !important;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0 !important;
+    border-radius: none !important;
 }

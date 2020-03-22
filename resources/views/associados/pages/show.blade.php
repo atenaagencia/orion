@@ -23,7 +23,7 @@
     </div><!--container-fluid-->
 </div>
 <div class="card-body">
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<ul class="nav nav-pills" id="pills-tab" role="tablist">
   <li class="nav-item">
     <a class="associado nav-link active" id="pills-home-tab" data-toggle="pill" href="#dados" role="tab" aria-controls="pills-home" aria-selected="true">Dados Pessoais</a>
   </li>
@@ -32,11 +32,13 @@
   </li>
 
 </ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="dados" role="tabpanel" aria-labelledby="pills-home-tab">
+<div class="tab-content mb-4 shadow-sm" id="pills-tabContent">
+  <div class="tab-pane fade show active border border-purple p-4" id="dados" role="tabpanel" aria-labelledby="pills-home-tab">
        @include('associados.components.dados')
   </div>
-  <div class="tab-pane fade" id="vinculo" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+  <div class="tab-pane fade border border-purple" id="vinculo" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <p class="py-4 p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis in harum deleniti, praesentium non nam ut dolorum ducimus maiores voluptatibus id reprehenderit vitae suscipit? Voluptatem fugiat reprehenderit dicta pariatur!</p>
+  </div>
 </div>
 
   
