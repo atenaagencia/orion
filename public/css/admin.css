@@ -1,3 +1,5 @@
+/*------------------estilos purple------------------*/
+
 .bg-admin-purple {
     background-color: #800080;
 }
@@ -5,6 +7,16 @@
 .text-purple {
     color: #800080;
     text-transform: none !important;
+}
+
+.btn-purple {
+    background-color: #800080;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: #800080;
+    color: white;
 }
 
 .btn-outline-purple {
@@ -19,16 +31,15 @@
     border-color: #800080;
 }
 
-.btn-purple {
-    background-color: #800080;
-    color: white;
+.border-purple {
+    border-color: #800080 !important;
 }
-
-.btn-purple:hover {
-    background-color: #800080;
-    color: white;
-}
+/*-----------outros estilos---------------*/
 
 .form-nonresize{
     resize: none !important;
+}
+
+.text-black{
+    color: #202020 !important;
 }

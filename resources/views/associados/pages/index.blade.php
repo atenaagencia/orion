@@ -17,20 +17,25 @@
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-        <thead>
-          <tr>
+        <thead class="">
+          <tr class="text-purple font-weight-bold">
             <th>Nome</th>
             <th>CPF</th>
-            <th>Cargo</th>
+            <th>Cargo(s)</th>
             <th>Opções</th>
           </tr>
         </thead>
         <tbody>
             @foreach ($associados as $associado)
           <tr>
-          <td>{{$associado->nome}}</td>
-              <td>{{$associado->cpf}}</td>
-              <td></td>
+          <td class="font-weight-bold text-black">{{$associado->nome}}</td>
+          <td class="font-weight-bold text-black">{{$associado->cpf}}</td>
+          <td>
+            <span class="badge badge-dark">CEO</span>
+            <span class="badge badge-danger">Diretor</span>
+            <span class="badge badge-warning">Supervisor</span>
+            <span class="badge badge-primary">Programador</span>
+          </td>
           <td class="flex-center py-auto my-auto mx-auto">
           <div class="btn-group">
             <a href="{{route('associado.show',$associado->id)}}" class="btn-sm p-1 pl-3 pr-3 btn btn-outline-purple fa fa-eye"></a>
