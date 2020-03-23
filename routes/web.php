@@ -18,5 +18,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('associado', 'AssociadoController');
 Route::resource('cargo', 'CargoController');
+Route::resource('vinculo', 'VinculoController');
 
 

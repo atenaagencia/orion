@@ -13,9 +13,12 @@
     @else
          <div class="col-md-12 p-2 mb-3 text-center">
            <h3 class="text-dark text-purple font-weight-bold">Associado não possui vínculo cadastrado!</h4>
-            <a href="#" class=" btn btn-purple">Cadastrar</a>
+            <a href="#" class=" btn btn-purple"  data-toggle="modal" data-target="#VinculoModal">Cadastrar</a>
         </div>
+        
     @endif
+   
+    @include('vinculos.components.modal_cad')
     </div><!--container-fluid-->
 
     
