@@ -12,8 +12,11 @@
     <div class="row container-fluid mx-auto">
         <div class="col-md-10 p-2">
             <h2 class="text-dark font-weight-bold">{{$associado->nome}}</h2>
-            <div class="">CEO</div>
-            <div class="">Desenvolvedor</div>
+            <div class="mb-2">
+              <span class="badge badge-dark">CEO</span>
+            <span class="badge badge-danger">Diretor</span>
+            <span class="badge badge-warning">Supervisor</span>
+            <span class="badge badge-primary">Programador</span></div>
             <div class="">Desde 2019</div>
         </div>
         <div class="col-md-2 p-2 d-lg-block d-none">
@@ -37,7 +40,7 @@
        @include('associados.components.dados')
   </div>
   <div class="tab-pane fade border border-purple" id="vinculo" role="tabpanel" aria-labelledby="pills-profile-tab">
-    <p class="py-4 p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis in harum deleniti, praesentium non nam ut dolorum ducimus maiores voluptatibus id reprehenderit vitae suscipit? Voluptatem fugiat reprehenderit dicta pariatur!</p>
+    <p class="py-4 p-4">  @include('associados.components.vinculo')</p>
   </div>
 </div>
 

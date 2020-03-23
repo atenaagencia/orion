@@ -10,11 +10,11 @@
  <div class="form-group row">
      <div class="col-sm-4">
         {!! Form::label('nome', 'Nome:', ['']) !!}
-        {!! Form::text('nome', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+        {!! Form::text('nome', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
       <div class="col-sm-4">
         {!! Form::label('cpf', 'CPF:', ['']) !!}
-        {!! Form::number('cpf', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+        {!! Form::number('cpf', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
       <div class="col-sm-4">
          {!! Form::label('rg', 'RG:', ['']) !!}
@@ -22,11 +22,11 @@
      </div>
      <div class="col-sm-4">
          {!! Form::label('data_nasc', 'Data de Nascimento:', ['']) !!}
-         {!! Form::date('data_nasc', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::date('data_nasc', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('nome_mae', 'Nome da Mãe:', ['']) !!}
-         {!! Form::text('nome_mae', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('nome_mae', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('cep', 'Cep:', ['']) !!}
@@ -34,27 +34,27 @@
      </div>
      <div class="col-sm-4">
          {!! Form::label('rua', 'Rua:', ['']) !!}
-         {!! Form::text('rua', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('rua', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-3">
          {!! Form::label('bairro', 'Bairro:', ['']) !!}
-         {!! Form::text('bairro', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('bairro', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-2">
          {!! Form::label('numero', 'Numero:', ['']) !!}
-         {!! Form::number('numero', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::number('numero', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-3">
          {!! Form::label('cidade', 'Cidade:', ['']) !!}
-         {!! Form::text('cidade', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('cidade', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('uf', 'Uf:', ['']) !!}
-         {!! Form::text('uf', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('uf', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('email_pessoal', 'Email Pessoal:', ['']) !!}
-         {!! Form::email('email_pessoal', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::email('email_pessoal', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('email_inst', 'Email Institucional:', ['']) !!}
@@ -65,11 +65,11 @@
      </div>
      <div class="col-sm-4">
          {!! Form::label('escolaridade', 'Escolaridade:', ['']) !!}
-         {!! Form::text('escolaridade', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('escolaridade', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('instituicao', 'Instituicao:', ['']) !!}
-         {!! Form::text('instituicao', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+         {!! Form::text('instituicao', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
      </div>
      <div class="col-sm-4">
          {!! Form::label('turno_aula', 'Turno Aula:', ['']) !!}

@@ -73,9 +73,15 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#cargos" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Tabelas Aux.</span>
+        </a>
+        <div id="cargos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="{{route('cargo.index')}}">Cargos</a>
+          </div>
+        </div>
       </li>
 
       <!-- Divider -->

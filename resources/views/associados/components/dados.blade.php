@@ -4,7 +4,7 @@
         <div class="col-md-12 border-top p-2 mb-3">
             <div class=""><span class="font-weight-bold text-dark">Nome do Associado:</span> {{$associado->nome}}</div>
             <div class=""><span class="font-weight-bold text-dark">CPF:</span> {{$associado->cpf}}</div>
-            <div class=""><span class="font-weight-bold text-dark">DATA DE NASCIMENTO:</span> {{$associado->data_nasc}}</div>
+            <div class=""><span class="font-weight-bold text-dark">DATA DE NASCIMENTO:</span> {{date('d/m/Y', strtotime($associado->data_nasc))}}</div>
             <div class=""><span class="font-weight-bold text-dark">RG:</span> {{$associado->rg}}</div>
             <div class=""><span class="font-weight-bold text-dark">MÃE:</span> {{$associado->nome_mae}}</div>
         </div>
