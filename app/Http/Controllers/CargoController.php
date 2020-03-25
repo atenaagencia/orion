@@ -88,4 +88,6 @@ class CargoController extends Controller
     {
         //
     }
+
+
 }

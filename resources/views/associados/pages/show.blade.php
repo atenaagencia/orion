@@ -17,7 +17,7 @@
             <span class="badge badge-danger">Diretor</span>
             <span class="badge badge-warning">Supervisor</span>
             <span class="badge badge-primary">Programador</span></div>
-            <div class="">Desde 2019</div>
+            <div class="">@if(isset($associado->vinculo))Desde {{date('Y', strtotime($associado->vinculo->data_vinculo))}}@endif</div>
         </div>
         <div class="col-md-2 p-2 d-lg-block d-none">
             <img class="border p-2 img-responsive" src="https://2.bp.blogspot.com/-c3xXGFDjNak/UEd_HcvsDuI/AAAAAAAAGcw/5KO5BHbRxnI/s1600/7.jpg" width="100%">
