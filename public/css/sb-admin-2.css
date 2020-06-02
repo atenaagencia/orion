@@ -11641,7 +11641,7 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url(../imagens/orion.jpg);
+  background: url('../imagens/orion.jpg');
   background-position: center;
   background-size: cover;
 }
