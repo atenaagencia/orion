@@ -60,7 +60,7 @@
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-lg-6 d-none bg-light d-lg-block" style="padding-top: 10em;"><!--bg-login-image-->
-                <h1 class="display-4 roboto-font text-purple text-center mx-auto">Orion</h1>
+                <h1 class="display-4 roboto-font text-purple text-center mx-auto">Orion <span class="fa fa-align-left text-secondary"></span></h1>
               </div>
               <div class="col-lg-6">
                 <div class="p-5" id="teste">
