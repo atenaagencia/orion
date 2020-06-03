@@ -65,7 +65,7 @@
               <div class="col-lg-6">
                 <div class="p-5" id="teste">
                   <h1 class="d-none d-sm-block d-md-none display-4 roboto-font text-purple text-left">Orion</h1>
-                  <h2 class="text-gray-900">Bem-vindo cavaleiro!</h2><br><br>
+                  <h2 class="text-gray-900">Bem-vindo, cavaleiro!</h2><br><br>
                   <form class="user" method="post" action="/login">
                       @csrf
                       <div class="form-group">

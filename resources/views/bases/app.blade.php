@@ -40,7 +40,11 @@
           <i class="fas fa-laugh-wink"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Orion</div>
+       
       </a>
+      <div class="text-center">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
