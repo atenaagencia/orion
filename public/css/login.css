@@ -7,6 +7,11 @@
     color: white;
 }
 
+
+.text-purple {
+    color: #800080;
+}
+
 .btn-login-purple:hover {
     background-color: white;
     border-color: #800080;
@@ -27,4 +32,16 @@
     background-color: white;
     border-color: white;
     color: #800080;
+}
+
+@media(max-width: 900px){
+
+    #teste a {
+        display: block;
+        position: absolute;
+        bottom: 48px;
+
+        left: 50%;
+        transform: translateX(-50%); /*mexe o elemento no eixo x*/
+    }
 }
