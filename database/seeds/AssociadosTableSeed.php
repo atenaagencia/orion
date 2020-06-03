@@ -56,7 +56,30 @@ class AssociadosTableSeed extends Seeder
             'area_formacao'=>'Computacao',
             'especializacao'=> 'Licenciatura em Computação',
             'talentos'=> 'nenhum',
-            'password'=> Hash::make('kmzwa8awaa')
+            'password'=> Hash::make('1234')
+        ]);
+
+        DB::table('associados')->insert([
+            'nome' => 'Moises Filipe',
+            'cpf' => '05424455573',
+            'rg' => '1399546430',
+            'data_nasc' => '1996-01-16',
+            'nome_mae' => 'Hilda',
+            'cep' => '48904137',
+            'rua' => 'quatro',
+            'bairro' => 'centro',
+            'numero' => '371',
+            'cidade' => 'juazeiro',
+            'uf' => 'Bahia',
+            'email_pessoal' => 'phill.educacional@gmail.com',
+            'email_inst' => 'philipramon@atenaagencia.com',
+            'escolaridade' => 'Ensino Superior',
+            'instituicao' => 'IfSertao',
+            'turno_aula' => null,
+            'area_formacao' => 'Computacao',
+            'especializacao' => 'Licenciatura em Computação',
+            'talentos' => 'nenhum',
+            'password' => Hash::make('1234')
         ]);
     }
 }
