@@ -2,7 +2,7 @@
     <div class="container-fluid mx-auto">   
    
    @if(isset($associado->vinculo))
-   <a href="#" class="btn btn-sm text-purple float-right" data-toggle="modal" data-target="#VinculoModal"><i class="fa fa-plus"></i></a>
+   <a href="#" class="btn btn-sm text-purple float-right" data-toggle="modal" data-target="#VinculoModal"><i class="fa fa-edit"></i></a>
     <h4 class="text-dark text-purple font-weight-bold">Informações do Vínculo</h4>
 
         <div class="col-md-12 border-top p-2 mb-3">
