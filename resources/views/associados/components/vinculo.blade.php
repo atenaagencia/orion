@@ -27,17 +27,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($associado->vinculo as $vinculo)
+                 
                     <tr>
-                        <td class="font-weight-bold text-black">{{$vinculo->setor}}</td>
-                        <td class="font-weight-bold text-black">{{date('d/m/Y', strtotime($vinculo->data_vinculo))}}</td>
-                        <td class="font-weight-bold text-black">{{$vinculo->tipo_vinculo}}</td>
-                        <td class="font-weight-bold text-black">{{$vinculo->supervisor}}</td>
-                        <td class="font-weight-bold text-black">{{$vinculo->status}}</td>
-                        <td class="font-weight-bold text-black">{{$vinculo->data_saida}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->setor}}</td>
+                        <td class="font-weight-bold text-black">{{date('d/m/Y', strtotime($associado->vinculo->data_vinculo))}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->tipo_vinculo}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->supervisor}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->status}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->data_saida}}</td>
                         
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>
