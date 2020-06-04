@@ -30,7 +30,7 @@ class Associado extends Authenticatable
 
     public function vinculo()
     {
-        return $this->hasOne('App\Vinculo');
+        return $this->hasMany('App\Vinculo');
     }
 
 

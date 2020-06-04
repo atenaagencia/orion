@@ -20,6 +20,8 @@ class CreateAssociadosTable extends Migration
             $table->string('rg')->nullable();
             $table->date('data_nasc');
             $table->string('nome_mae');
+            $table->string('telefone')->nullable();
+            $table->string('whatsapp')->nullable();
             $table->string('cep')->nullable();
             $table->string('rua');
             $table->string('bairro');

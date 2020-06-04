@@ -21,6 +21,7 @@ class CreateVinculosTable extends Migration
             $table->date('data_vinculo');
             $table->string('tipo_vinculo');
             $table->string('supervisor')->nullable();
+            $table->enum('status', ['ativo', 'inativo'])->nullable()->default('ativo');
             $table->date('data_saida')->nullable();
             $table->timestamps();
         });
