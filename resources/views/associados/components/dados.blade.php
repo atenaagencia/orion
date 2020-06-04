@@ -1,5 +1,6 @@
 <div class="row py-4">
     <div class="container-fluid mx-auto">   
+        <a href="{{route('associado.edit',$associado->id)}}" class="btn btn-sm text-purple float-right"><i class="fa fa-edit"></i></a>
     <h4 class="text-dark text-purple font-weight-bold py-2">Dados Pessoais</h4>
         <div class="col-md-12 border-top p-2 mb-3">
             <div class=""><span class="font-weight-bold text-dark">Nome:</span> {{$associado->nome}}</div>

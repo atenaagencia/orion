@@ -3,7 +3,7 @@
 @section('title', 'Associado | Ficha')
 @section('edit')
 <a href="{{route('associado.index')}}" class="btn btn-sm text-purple"><i class="fa fa-arrow-left"></i></a>
-<a href="{{route('associado.edit',$associado->id)}}" class="btn btn-sm text-purple"><i class="fa fa-edit"></i></a>
+
 @endsection
 @section('pages_associado')
 
