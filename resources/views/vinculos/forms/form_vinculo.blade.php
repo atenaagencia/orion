@@ -15,6 +15,7 @@
      <div class="col-sm-6">
         {!! Form::label('setor', 'Setor:', ['']) !!}
         {!! Form::text('setor', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
+        
      </div>
      <div class="col-sm-6">
         {!! Form::label('data_vinculo', 'Inicio do Vinculo:', ['']) !!}

@@ -5,8 +5,15 @@ namespace App\Http\Controllers;
 use App\Associado;
 use Illuminate\Http\Request;
 
+
 class AssociadoController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->authorizeResource(Associado::class, 'associado');
+    // }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,7 @@ class AssociadoController extends Controller
      */
     public function index()
     {
-        $associados = Associado::all();
+        $associados= Associado::all();
         return view('associados.pages.index')->with(compact('associados'));
     }
 
