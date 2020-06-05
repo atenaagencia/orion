@@ -15,11 +15,11 @@
     </div>
     <div class="col-sm-4">
         {!! Form::label('cpf', 'CPF:', ['']) !!}
-        {!! Form::number('cpf', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
+        {!! Form::text('cpf', $value=null, ['maxlength'=>'11','class'=> ['form-control','form-control-user'],'required']) !!}
     </div>
     <div class="col-sm-4">
         {!! Form::label('rg', 'RG:', ['']) !!}
-        {!! Form::number('rg', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
+        {!! Form::text('rg', $value=null, ['class'=> ['form-control','form-control-user']]) !!}
     </div>
     <div class="col-sm-4">
         {!! Form::label('data_nasc', 'Data de Nascimento:', ['']) !!}
@@ -51,7 +51,7 @@
     </div>
     <div class="col-sm-2">
         {!! Form::label('numero', 'Numero:', ['']) !!}
-        {!! Form::number('numero', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
+        {!! Form::text('numero', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
     </div>
     <div class="col-sm-3">
         {!! Form::label('cidade', 'Cidade:', ['']) !!}
@@ -129,6 +129,66 @@
             $("#uf").val("");
         }
 
+        function disabledEndereco(b){
+            $("#rua").prop('disabled', b);;
+            $("#bairro").prop('disabled', b);;
+            $("#cidade").prop('disabled', b);;
+            $("#uf").prop('disabled', b);;
+        }
+
+        $("#rg").keyup(function() {
+            $("#rg").val(this.value.match(/[0-9]*/));
+        });
+
+        $("#cpf").keyup(function() {
+            $("#cpf").val(this.value.match(/[0-9]*/));
+        });
+
+        $("#cpf").blur(function () {
+
+            var exp = /\.|\-/g;
+
+            var cpf = $('#cpf').val().replace(exp,'').toString();
+
+            if(cpf.length == 11 ){
+
+                var v = [];
+
+                //Calcula o primeiro dígito de verificação.
+                v[0] = 1 * cpf[0] + 2 * cpf[1] + 3 * cpf[2];
+                v[0] += 4 * cpf[3] + 5 * cpf[4] + 6 * cpf[5];
+                v[0] += 7 * cpf[6] + 8 * cpf[7] + 9 * cpf[8];
+                v[0] = v[0] % 11;
+                v[0] = v[0] % 10;
+
+                //Calcula o segundo dígito de verificação.
+                v[1] = 1 * cpf[1] + 2 * cpf[2] + 3 * cpf[3];
+                v[1] += 4 * cpf[4] + 5 * cpf[5] + 6 * cpf[6];
+                v[1] += 7 * cpf[7] + 8 * cpf[8] + 9 * v[0];
+                v[1] = v[1] % 11;
+                v[1] = v[1] % 10;
+
+                //Retorna Verdadeiro se os dígitos de verificação são os esperados.
+
+                if ((v[0] != cpf[9]) || (v[1] != cpf[10])) {
+                    alert('CPF inválido');
+                    $('#cpf').focus();
+                }
+
+                else if (cpf[0] == cpf[1] && cpf[1] == cpf[2] && cpf[2] == cpf[3] && cpf[3] == cpf[4] && cpf[4] == cpf[5] && cpf[5] == cpf[6] && cpf[6] == cpf[7] && cpf[7] == cpf[8] && cpf[8] == cpf[9] && cpf[9] == cpf[10])
+                {
+                    alert('CPF inválido');
+                    $('#cpf').focus();
+                }
+
+            }else {
+                alert('CPF inválido');
+                $('#cpf').focus();
+            }
+
+
+        });
+
         $("#cep").keyup(function() {
         $("#cep").val(this.value.match(/[0-9]*/));
         });
@@ -162,10 +222,12 @@
                             $("#bairro").val(dados.bairro);
                             $("#cidade").val(dados.localidade);
                             $("#uf").val(dados.uf);
+                            disabledEndereco(true);
                         } //end if.
-                        else{
+                        else {
                             //CEP pesquisado não foi encontrado.
                             limpa_formulário_cep();
+                            disabledEndereco(false);
                             alert("CEP não encontrado.");
                         }
                     });
@@ -173,12 +235,14 @@
                 else {
                     //cep é inválido.
                     limpa_formulário_cep();
+                    disabledEndereco(false);
                     alert("Formato de CEP inválido.");
                 }
             } //end if.
             else {
                 //cep sem valor, limpa formulário.
                 limpa_formulário_cep();
+                disabledEndereco(false);
             }
         });
     });
