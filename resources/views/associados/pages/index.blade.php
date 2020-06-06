@@ -1,9 +1,6 @@
 @extends('associados.layouts.associado')
 
 <style>
-body#page-top #wrapper>#content-wrapper>#content{
-  background-color: white !important;
-}
 .bg-light-danger{
   background-color: #FCF6F6;
 }
@@ -65,64 +62,132 @@ padding:0;
 .bg-admin-purple {
     background-color: #800080 !important;
 }
+
+@media (min-width: 1200px) {
+    .container, .container-fluid{
+      max-width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+}
+
+.table.table-head-bg thead tr:last-child {
+    border-top-right-radius: .675rem !important;
+    border-bottom-right-radius: .675rem !important;
+}
+.table.table-head-bg thead tr:first-child {
+    border-top-left-radius: .675rem !important;
+    border-bottom-left-radius: .675rem !important;
+}
+.table.table-head-bg thead th, .table.table-head-bg thead tr {
+    background-color: #f3f6f9;
+    border-bottom: 0;
+    letter-spacing: 1px;
+}
+thead tr {
+    font-weight: 600;
+    color: #b5b5c3!important;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
 </style>
 
 {{-- @section('title', 'Associados') --}}
 
 @section('pages_associado')
 
-<div class="card shadow mb-4 rounded-0">
-  <div class="card-header py-4 clearfix rounded-0 border-0">
-    <div class="row">
-        <div class="col col-xs-6">
-          <h3 class="card-title font-weight-bold text-purple">Associados</h3>
-        </div>
-        <div class="col col-xs-6 text-right">
-          <a href="{{route('associado.create')}}" class="float-right btn btn-purple"> Novo cadastro</a>
-        </div>
-    </div>   
-  </div>
-  <div class="card-body m-0 p-0 rounded-0">
-    <div class="table-responsive">
-      <table class="table table-hover align-items-center table-flush" id="dataTable" width="100%" cellspacing="0">
-        <thead class="py-3 thead-light text-purple">
-          <tr class="text-purple font-weight-bold">
-            <th class="text-purple">Nome</th>
-            <th class="text-purple">CPF</th>
-            <th colspan="4" class="text-center text-purple">Cargo(s)</th>
-            <th colspan="3" class="text-center text-purple">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach ($associados as $associado)
-          <tr class="">
-            <td class="text-black">{{$associado->nome}}</td>
-            <td class="text-black ">{{$associado->cpf}}</td>
-            <td class="text-center">
-              <span class="badge badge-dark">CEO</span>
-            </td>
-            <td class="text-center">
-              <span class="badge badge-dark">Diretor</span>
-            </td>
-            <td class="text-center">
-              <span class="badge badge-dark">Supervisor</span>
-            </td>
-            <td class="text-center">
-              <span class="badge badge-dark">Programador</span>
-            </td>
 
-            <td class="border-left  text-center"><a href="{{route('associado.show',$associado->id)}}" class="btn-sm p-1 pl-2 pr-2 btn btn-outline-dark fa fa-eye"></a></td>
-            <td class="border-right border-left text-center"><a href="{{route('associado.edit',$associado->id)}}" class="btn-sm p-1 pl-2 pr-2 btn btn-outline-dark fa fa-edit"></a></td> 
-            <td class="bg-light-danger text-center"><a href="" class="btn-sm p-1 pl-2 pr-2 btn btn-outline-danger fas fa-trash-alt"></a></td>                         
-          </tr>
-          @endforeach
-        </tbody>
-      </table>
+<div class="card card-custom gutter-b border-0">
+    <!--begin::Header-->
+    <div class="card-header bg-transparent border-0 py-2 pt-4">
+        <div class="row">
+          <div class="col col-xs-6">
+            <h3 class="card-title font-weight-bold text-purple">Associados</h3>
+          </div>
+          <div class="col col-xs-6 text-right">
+            <a href="{{route('associado.create')}}" class="btn btn-purple font-weight-bold">Criar</a>
+          </div>
+        </div> 
     </div>
-  </div>
-  <div class="card-footer rounded-0">
-      Lista de Associados
-  </div>
-</div>          
+    <!--end::Header-->
+
+    <!--begin::Body-->
+    <div class="card-body p-4">
+        <div class="tab-content">
+            <!--begin::Table-->
+            <div class="table-responsive">
+                <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
+                    <thead>
+                        <tr class="text-left text-uppercase">
+                            <th style="min-width: 250px" class="font-weight-bold text-dark pl-7"><span class="text-dark-75">Descrição</span></th>
+                            <th class="font-weight-bold text-dark" style="min-width: 100px">cpf</th>
+                            <th class="font-weight-bold text-dark" style="min-width: 100px">setor</th>
+                            <th class="font-weight-bold text-dark" style="min-width: 100px">cargo</th>
+                            <th class="font-weight-bold text-dark" style="min-width: 130px" colspan="1">ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($associados as $associado)
+                        <tr>
+                            <td class="pl-0 py-8">
+                                <div class="d-flex align-items-center">
+                                    <div class="symbol symbol-50 symbol-light mr-4">
+                                        <span class="symbol-label">
+                                            <img src="https://via.placeholder.com/75x75" class="h-75 align-self-end rounded" alt="">
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-purple font-weight-bolder mb-1 font-size-lg">{{$associado->nome}}</a>
+                                        <span class="text-muted font-weight-bold d-block">HTML, JS, ReactJS</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="text-dark-75 font-weight-bolder d-block font-size-lg">
+                                    {{$associado->cpf}}
+                                </span>
+                                <span class="text-muted font-weight-bold">
+                                    Pessoa física
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-dark-75 font-weight-bolder d-block font-size-lg">
+                                    Desenvolvimento
+                                </span>
+                                <span class="text-muted font-weight-bold">
+                                    Front-End
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-dark-75 font-weight-bolder d-block font-size-lg">
+                                    Supervisor
+                                </span>
+                                <span class="text-muted font-weight-bold">
+                                    Web, UI/UX Design
+                                </span>
+                            </td>
+            
+                            <td class="py-4 flex-center">
+                                <a href="#" class="btn btn-light font-weight-bolder font-size-sm p-2 mr-2 ml-2">
+                                  <span class="fa fa-eye text-purple"></span>
+                                </a>
+                                <a href="#" class="btn btn-light font-weight-bolder font-size-sm p-2 mr-2 ml-2">
+                                  <span class="fa fa-edit text-purple"></span>
+                                </a>
+                                <a href="#" class="btn btn-light font-weight-bolder font-size-sm p-2 mr-2 ml-2">
+                                  <span class="fas fa-trash-alt text-purple"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <!--end::Table-->
+        </div>
+    </div>
+    <!--end::Body-->
+</div>
 @endsection
  
