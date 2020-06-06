@@ -85,7 +85,7 @@
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">LOREM IPSUM</div>
+      <div class="sidebar-heading">Painel de Controle</div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
@@ -96,7 +96,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-teste py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Tabelas:</h6>
+            {{-- <h6 class="collapse-header">Tabelas:</h6> --}}
             <a class="collapse-item" href="#">Clientes</a>
             <a class="collapse-item" href="{{route('associado.index')}}">Associados</a>           
             <a class="collapse-item" href="#">Fornecedores</a>
