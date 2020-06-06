@@ -23,14 +23,6 @@
 </head>
 
 <style>
-
-  .form-group input{
-    background-color: #f3f6f9;
-    border-color: #f3f6f9;
-    color: #464e5f;
-    margin-bottom: 6% !important;
-  }
-  
   .roboto-font{
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -52,49 +44,28 @@
       display: flex;
       justify-content: center;
   }
-
-  @media (min-width: 800px) {
-    body .container#response{
-      max-width: 85%;
-    }
-  }
-
-  @media (min-width: 1000px) {
-    body .container#response{
-      max-width: 65%;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    body .container#response{
-      max-width: 45%;
-    }
-  }
-  @media (min-width: 1400px) {
-    body .container#response{
-      max-width: 35%;
-    }
-  }
-
 </style>
 
-<body class="bg-white flex-center position-ref full-height">
+<body class="bg-login-purple flex-center position-ref full-height">
 
-  <div class="container" id="response">
+  <div class="container">
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
       <div class="col-xl-10 col-lg-12 col-md-9">
-        <h1 class="display-4 roboto-font text-purple text-center mx-auto">Orion <span class="fa fa-align-left text-secondary"></span></h1>
-        <div class="card o-hidden border-0 my-5 rounded-0">
+
+        <div class="card o-hidden border-0 shadow-lg my-5 rounded-0">
           <div class="card-body rounded-0 p-0">
             <!-- Nested Row within Card Body -->
-            <div class="row">              
-              <div class="col-lg-12">
-                <div class="p-5">                  
+            <div class="row">
+              <div class="col-lg-6 d-none bg-light d-lg-block" style="padding-top: 10em;"><!--bg-login-image-->
+                <h1 class="display-4 roboto-font text-purple text-center mx-auto">Orion <span class="fa fa-align-left text-secondary"></span></h1>
+              </div>
+              <div class="col-lg-6">
+                <div class="p-5" id="teste">
                   <h1 class="d-none d-sm-block d-md-none display-4 roboto-font text-purple text-left">Orion</h1>
-                  <h2 class="text-gray-900 text-center">Bem-vindo, cavaleiro!</h2><br><br>
+                  <h2 class="text-gray-900">Bem-vindo, cavaleiro!</h2><br><br>
                   <form class="user" method="post" action="/login">
                       @csrf
                       <div class="form-group">
@@ -103,10 +74,11 @@
                       <div class="form-group">
                         <input type="password" name="password" class="form-control form-control-user p-4" id="exampleInputPassword" placeholder="Senha" required>
                       </div>
-                      <button class="btn btn-block col-4 ml-auto btn-login-purple btn-user p-3 mt-5">
+                      <button class="btn btn-login-purple btn-user btn-block p-3 mt-5">
                         <span class="h5 py-auto mx-auto my-auto font-weight-bold">Login</span>
                       </button>
                     </form>
+                    
                 </div>
               </div>
             </div>
@@ -117,7 +89,7 @@
 
     </div>
     <div class="text-center">
-      <span class="muted">Um produto de</span> <a class="small font-weight-bold text-dark" href="http://www.atenaagencia.com" target="/blank">Atena Agencia <i class="fa fa-registered"></i></a>.
+      <span class="">Um produto de</span> <a class="small font-weight-bold text-light" href="http://www.atenaagencia.com" target="/blank">Atena Agencia</a>.
     </div>
   </div>
 
