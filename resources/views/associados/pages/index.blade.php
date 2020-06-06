@@ -169,14 +169,14 @@ thead tr {
                             </td>
             
                             <td class="py-4 flex-center">
-                                <a href="#" class="btn btn-light font-weight-bolder font-size-sm p-2 mr-2 ml-2">
-                                  <span class="fa fa-eye text-purple"></span>
+                                <a href="{{route('associado.show',$associado->id)}}" class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
+                                  <span class="fa fa-eye"></span>
                                 </a>
-                                <a href="#" class="btn btn-light font-weight-bolder font-size-sm p-2 mr-2 ml-2">
-                                  <span class="fa fa-edit text-purple"></span>
+                                <a href="{{route('associado.edit',$associado->id)}}" class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
+                                  <span class="fa fa-edit"></span>
                                 </a>
-                                <a href="#" class="btn btn-light font-weight-bolder font-size-sm p-2 mr-2 ml-2">
-                                  <span class="fas fa-trash-alt text-purple"></span>
+                                <a href="#" class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
+                                  <span class="fas fa-trash-alt"></span>
                                 </a>
                             </td>
                         </tr>
