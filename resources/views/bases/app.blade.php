@@ -175,7 +175,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-3 d-none d-lg-inline text-purple font-weight-bold small">{{Auth::user()->nome}}</span>
                 <img class="img-profile rounded-circle"
-                  src="https://2.bp.blogspot.com/-c3xXGFDjNak/UEd_HcvsDuI/AAAAAAAAGcw/5KO5BHbRxnI/s1600/7.jpg">
+                  src="{{Auth::user()->foto}}" width="100%">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
