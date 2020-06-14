@@ -19,6 +19,8 @@ class CreateVinculosTable extends Migration
             $table->foreign('associado_id')->references('id')->on('associados');
             $table->unsignedBigInteger('setor_id');
             $table->foreign('setor_id')->references('id')->on('setors');
+            $table->unsignedBigInteger('cargo_id');
+            $table->foreign('cargo_id')->references('id')->on('cargos');
             $table->date('data_vinculo');
             $table->string('tipo_vinculo');
             $table->unsignedBigInteger('supervisor_id')->nullable();
