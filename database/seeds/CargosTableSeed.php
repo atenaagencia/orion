@@ -17,11 +17,8 @@ class CargosTableSeed extends Seeder
         ]);
 
         DB::table('cargos')->insert([
-            'cargo'=>'Supervisor'
+            'cargo' => 'Gestor'
         ]);
 
-        DB::table('cargos')->insert([
-            'cargo'=>'Programador'
-        ]);
     }
 }

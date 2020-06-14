@@ -1,9 +1,12 @@
 @inject('setores', 'App\Setor')
 @inject('supervisores', 'App\Associado')
+@inject('cargos', 'App\Cargo')
 
 @php
 $setor = $setores->pluck('setor', 'id')->all();
-$sup = $supervisores->where('supervisor','sim')->get()->pluck('nome', 'id');
+$cargo = $cargos->pluck('cargo', 'id')->all();
+$sup = $supervisores->where('supervisor','sim')->where('id','<>',Auth::id())->get()->pluck('nome', 'id');
+
 $botao = null;
 @endphp
 @if(isset($associado->vinculo))
@@ -27,8 +30,13 @@ $botao = null;
    {!! Form::hidden('associado_id', $associado->id, ['class'=> ['form-control'],'readonly']) !!}
    <div class="col-sm-6">
       {!! Form::label('setor', 'Setor:', ['']) !!}
-      {!! Form::select('setor_id', $setor, $value=null, ['class'=> ['form-control'],'required']) !!}
+      {!! Form::select('setor_id',$setor = Arr::prepend($setor, '----', ''), $value=null, ['class'=> ['form-control'],'required']) !!}
 
+   </div>
+   <div class="col-sm-6">
+      {!! Form::label('cargo', 'Cargo:', ['']) !!}
+      {!! Form::select('cargo_id', $cargo = Arr::prepend($cargo, '----', ''), $value=null, ['class'=> ['form-control'],'required']) !!}
+   
    </div>
    <div class="col-sm-6">
       {!! Form::label('data_vinculo', 'Inicio do Vinculo:', ['']) !!}
@@ -41,7 +49,7 @@ $botao = null;
    </div>
    <div class="col-sm-6">
       {!! Form::label('supervisor', 'Supervisor:', ['']) !!}
-    {!! Form::select('supervisor_id', $sup, $value=null, ['class'=> ['form-control'],'required']) !!}
+    {!! Form::select('supervisor_id', [''=> '---',$sup] , $value=null, ['class'=> ['form-control']]) !!}
    </div>
 
    <div class="col-sm-12 mt-3">
