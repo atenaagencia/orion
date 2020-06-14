@@ -1,8 +1,19 @@
 /*------------------estilos purple------------------*/
 
+}
+
+.sidebar .sidebar-brand-text {
+    text-transform: none !important;
+}
+
 .bg-admin-purple {
     background-color: #800080;
 }
+
+.roboto-font{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+  }
 
 .text-purple {
     color: #800080 !important;
