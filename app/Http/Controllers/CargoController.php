@@ -14,8 +14,8 @@ class CargoController extends Controller
      */
     public function index()
     {
-        $cargos = Cargo::all();
-        return view('cargo.pages.index')->with(compact('cargos'));
+         return view('cargo.pages.index')->with(compact('cargos'));$cargos = Cargo::all();
+       
     }
     
 

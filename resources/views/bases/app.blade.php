@@ -114,6 +114,7 @@
         <div id="cargos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-teste py-2 collapse-inner rounded">
             <a class="collapse-item text-light" href="{{route('cargo.index')}}">Cargos</a>
+            <a class="collapse-item text-light" href="{{route('setor.index')}}">Setores</a>
           </div>
         </div>
       </li>
@@ -213,7 +214,7 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
+      <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; Atena Agencia® {{date('Y')}}</span>

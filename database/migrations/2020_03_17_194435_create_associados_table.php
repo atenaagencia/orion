@@ -36,6 +36,8 @@ class CreateAssociadosTable extends Migration
             $table->string('area_formacao')->nullable();
             $table->string('especializacao')->nullable();
             $table->longText('talentos')->nullable();
+            $table->enum('supervisor', ['sim', 'nao'])->nullable();
+            $table->enum('status', ['ativo', 'inativo'])->nullable()->default('ativo');
             $table->string('password')->nullable();       
             $table->timestamps();
            

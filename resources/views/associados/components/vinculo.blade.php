@@ -29,12 +29,12 @@
                 <tbody>
                  
                     <tr>
-                        <td class="font-weight-bold text-black">{{$associado->vinculo->setor}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->setor_associado->setor}}</td>
                         <td class="font-weight-bold text-black">{{date('d/m/Y', strtotime($associado->vinculo->data_vinculo))}}</td>
                         <td class="font-weight-bold text-black">{{$associado->vinculo->tipo_vinculo}}</td>
-                        <td class="font-weight-bold text-black">{{$associado->vinculo->supervisor}}</td>
+                        <td class="font-weight-bold text-black">{{$associado->vinculo->supervisor->nome}}</td>
                         <td class="font-weight-bold text-black">{{$associado->vinculo->status}}</td>
-                        <td class="font-weight-bold text-black">{{$associado->vinculo->data_saida}}</td>
+                        <td class="font-weight-bold text-black">{{($associado->vinculo->data_saida == null)? '------' : $associado->vinculo->data_saida}}</td>
                         
                     </tr>
                 </tbody>
