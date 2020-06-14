@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Vinculo;
+use App\Setor;
 use Illuminate\Http\Request;
 
-class VinculoController extends Controller
+class SetorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class VinculoController extends Controller
      */
     public function index()
     {
-      
+        $setores = Setor::all();
+        return view('setor.pages.index')->with(compact('setores'));   //
     }
 
     /**
@@ -24,7 +25,7 @@ class VinculoController extends Controller
      */
     public function create()
     {
-        //
+        return view('setor.pages.create');
     }
 
     /**
@@ -35,18 +36,18 @@ class VinculoController extends Controller
      */
     public function store(Request $request)
     {
-        $query = Vinculo::create($request->all());
+        $query = Setor::create($request->all());
 
-        return redirect(route('associado.show',$request->associado_id));
+        return redirect(route('setor.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Vinculo  $vinculo
+     * @param  \App\Setor  $setor
      * @return \Illuminate\Http\Response
      */
-    public function show(Vinculo $vinculo)
+    public function show(Setor $setor)
     {
         //
     }
@@ -54,35 +55,33 @@ class VinculoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Vinculo  $vinculo
+     * @param  \App\Setor  $setor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vinculo $vinculo)
+    public function edit(Setor $setor)
     {
-        //
+        return view('setor.pages.edit')->with(compact('setor'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Vinculo  $vinculo
+     * @param  \App\Setor  $setor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vinculo $vinculo)
+    public function update(Request $request, Setor $setor)
     {
-        $vinculo->update($request->all());
-
-        return back();
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Vinculo  $vinculo
+     * @param  \App\Setor  $setor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vinculo $vinculo)
+    public function destroy(Setor $setor)
     {
         //
     }
