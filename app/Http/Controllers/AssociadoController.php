@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Associado;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 class AssociadoController extends Controller
@@ -21,7 +22,7 @@ class AssociadoController extends Controller
      */
     public function index()
     {
-        $associados= Associado::all();
+        $associados = Associado::all();
         return view('associados.pages.index')->with(compact('associados'));
     }
 
@@ -79,6 +80,17 @@ class AssociadoController extends Controller
      */
     public function update(Request $request, Associado $associado)
     {
+        if ($request->tipo == 'imagem') {
+            $ext = $request->file('foto')->extension();
+            $name = $associado->id . '.' . $ext;
+            Storage::disk('public')->putFileAs('fotos', $request->file('foto'), $name);
+
+            $associado->foto = '/storage/fotos/'.$name;
+            $associado->save();
+
+            return back();
+        }
+
         $associado->update($request->all());
 
         return back();
