@@ -118,6 +118,18 @@
           </div>
         </div>
       </li>
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#autoriza" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="bg-teste rounded text-light pr-4 p-2 fas fa-fw fa-cog"></i>
+            <span class="font-weight-bold">Autorizações</span>
+          </a>
+          <div id="autoriza" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-teste py-2 collapse-inner rounded">
+            <a class="collapse-item text-light" href="{{route('regras.index')}}">Por usuário</a>
+            </div>
+          </div>
+        </li>
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-md-inline py-4">

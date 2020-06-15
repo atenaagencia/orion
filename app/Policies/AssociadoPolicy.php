@@ -17,10 +17,13 @@ class AssociadoPolicy
      * @return mixed
      */
     public function viewAny(Associado $associado)
-    {
-        if($associado->vinculo->tipo_vinculo == 'Socio'){
-            return true;
-        }      
+    {        
+        foreach ($associado->regras as $r) {
+            if($r->regras->entidade == 'associado' && $r->regras->regra == 'all'){
+                return true;
+            };
+        }
+
         return false;
     }
 
@@ -33,8 +36,10 @@ class AssociadoPolicy
 //      */
     public function view(Associado $associado)
     {
-        if ($associado->vinculo->tipo_vinculo == 'Socio') {
-            return true;
+        foreach ($associado->regras as $r) {
+            if ($r->regras->entidade == 'associado' && $r->regras->regra == 'view') {
+                return true;
+            };
         }
         return false;
     }

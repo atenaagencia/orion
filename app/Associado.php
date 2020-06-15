@@ -32,6 +32,11 @@ class Associado extends Authenticatable
     {
         return $this->hasOne('App\Vinculo','associado_id');
     }
+    public function regras()
+    {
+        return $this->hasMany('App\RegrasAssociados', 'associado_id');
+    }
+
 
 
 
