@@ -186,12 +186,12 @@
 
                             </td>
                             <td class="py-4 flex-center">
-                                @can('view', $associado)                          
+                                                   
                                 <a href="{{route('associado.show',$associado->id)}}"
                                     class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
                                     <span class="fa fa-eye"></span>
                                 </a>
-                                @endcan
+                               
                                 {{-- <a href="{{route('associado.edit',$associado->id)}}"
                                     class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
                                     <span class="fa fa-edit"></span>
