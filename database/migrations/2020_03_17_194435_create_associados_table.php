@@ -16,6 +16,7 @@ class CreateAssociadosTable extends Migration
         Schema::create('associados', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
+            $table->string('nome_social');
             $table->string('cpf',11);
             $table->string('rg')->nullable();
             $table->date('data_nasc');

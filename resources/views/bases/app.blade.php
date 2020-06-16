@@ -185,7 +185,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-3 d-none d-lg-inline text-purple font-weight-bold small">{{Auth::user()->nome}}</span>
+                <span class="mr-3 d-none d-lg-inline text-purple font-weight-bold small">{{Auth::user()->nome_social}}</span>
                 <img class="img-profile rounded-circle"
                   src="{{Auth::user()->foto}}" width="100%">
               </a>

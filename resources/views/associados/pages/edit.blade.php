@@ -9,7 +9,7 @@
     <div class="card-header clearfix">
         <div class="row container-fluid mx-auto">
             <div class="col-md-10 p-2">
-                <h2 class="text-dark font-weight-bold">{{$associado->nome}}</h2>
+                <h2 class="text-dark font-weight-bold">{{$associado->nome_social}}</h2>
                 <div class="">CEO</div>
                 <div class="">Desenvolvedor</div>
                 <div class="">Desde 2019</div>
