@@ -118,6 +118,18 @@
           </div>
         </div>
       </li>
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#autoriza" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="bg-teste rounded text-light pr-4 p-2 fas fa-fw fa-cog"></i>
+            <span class="font-weight-bold">Autorizações</span>
+          </a>
+          <div id="autoriza" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-teste py-2 collapse-inner rounded">
+            <a class="collapse-item text-light" href="{{route('regras.index')}}">Por usuário</a>
+            </div>
+          </div>
+        </li>
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-md-inline py-4">
@@ -173,9 +185,9 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-3 d-none d-lg-inline text-purple font-weight-bold small">{{Auth::user()->nome}}</span>
+                <span class="mr-3 d-none d-lg-inline text-purple font-weight-bold small">{{Auth::user()->nome_social}}</span>
                 <img class="img-profile rounded-circle"
-                  src="https://2.bp.blogspot.com/-c3xXGFDjNak/UEd_HcvsDuI/AAAAAAAAGcw/5KO5BHbRxnI/s1600/7.jpg">
+                  src="{{Auth::user()->foto}}" width="100%">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

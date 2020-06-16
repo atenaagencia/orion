@@ -14,6 +14,10 @@
         {!! Form::text('nome', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
     </div>
     <div class="col-sm-4">
+        {!! Form::label('nome_social', 'Nome social:', ['']) !!}
+        {!! Form::text('nome_social', $value=null, ['class'=> ['form-control','form-control-user'],'required']) !!}
+    </div>
+    <div class="col-sm-4">
         {!! Form::label('cpf', 'CPF:', ['']) !!}
         {!! Form::text('cpf', $value=null, ['maxlength'=>'11','class'=> ['form-control','form-control-user'],'required']) !!}
     </div>

@@ -14,7 +14,8 @@ class AssociadosTableSeed extends Seeder
     public function run()
     {
         DB::table('associados')->insert([
-            'nome' => 'Herbet Junior',
+            'nome' => 'Herbet Gomes Medrado Junior',
+            'nome_social' => 'Herbet Junior',
             'cpf' => '04261687550',
             'rg' => '1369825498',
             'data_nasc' => '1991-02-01',
@@ -39,6 +40,7 @@ class AssociadosTableSeed extends Seeder
 
         DB::table('associados')->insert([
             'nome' => 'Philip Ramon',
+            'nome_social' => 'Philip Ramon',
             'cpf' => '05424455573',
             'rg' => '1399546430',
             'data_nasc' => '1996-01-16',
@@ -62,6 +64,7 @@ class AssociadosTableSeed extends Seeder
         ]);
         DB::table('associados')->insert([
             'nome' => 'Moisés Filipe',
+            'nome_social' => 'Moisés Filipe',
             'cpf' => '08889224428',
             'rg' => '1399546430',
             'data_nasc' => '1996-01-16',

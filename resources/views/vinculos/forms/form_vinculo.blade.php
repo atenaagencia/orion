@@ -5,7 +5,7 @@
 @php
 $setor = $setores->pluck('setor', 'id')->all();
 $cargo = $cargos->pluck('cargo', 'id')->all();
-$sup = $supervisores->where('supervisor','sim')->where('id','<>',Auth::id())->get()->pluck('nome', 'id');
+$sup = $supervisores->where('supervisor','sim')->where('id','<>',$associado->id)->get()->pluck('nome', 'id');
 
 $botao = null;
 @endphp

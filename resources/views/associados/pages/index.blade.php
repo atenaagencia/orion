@@ -148,9 +148,10 @@
                             <td class="pl-0 py-8">
                                 <div class="d-flex align-items-center">
                                     <div class="symbol symbol-50 symbol-light mr-4">
-                                        <span class="symbol-label">
-                                            <img src="https://via.placeholder.com/75x75"
-                                                class="h-75 align-self-end rounded" alt="">
+                                        <span class="symbol-label" style="width: 75px; height:75px;">
+                                            
+                                            <img src="{{$associado->foto}}"
+                                                class=" align-self-end rounded" alt="" style="width: 75px; height:75px;">
                                         </span>
                                     </div>
                                     <div>
@@ -185,14 +186,16 @@
 
                             </td>
                             <td class="py-4 flex-center">
+                                                   
                                 <a href="{{route('associado.show',$associado->id)}}"
                                     class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
                                     <span class="fa fa-eye"></span>
                                 </a>
-                                <a href="{{route('associado.edit',$associado->id)}}"
+                               
+                                {{-- <a href="{{route('associado.edit',$associado->id)}}"
                                     class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
                                     <span class="fa fa-edit"></span>
-                                </a>
+                                </a> --}}
                                 <a href="#"
                                     class="btn btn-outline-purple font-weight-bolder font-size-sm p-2 mr-2 ml-2">
                                     <span class="fas fa-trash-alt"></span>

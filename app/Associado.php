@@ -16,7 +16,7 @@ class Associado extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nome', 'cpf', 'rg', 'data_nasc', 'nome_mae', 'cep', 'rua', 'bairro', 'numero', 'cidade', 'uf', 'email_pessoal', 'email_inst', 'escolaridade', 'instituicao', 'turno_aula', 'area_formacao', 'especializacao', 'talentos', 'password', 'created_at', 'updated_at'
+        'nome','nome_social', 'cpf', 'rg', 'data_nasc', 'nome_mae', 'cep', 'rua', 'bairro', 'numero', 'cidade', 'uf', 'email_pessoal', 'email_inst', 'escolaridade', 'instituicao', 'turno_aula', 'area_formacao', 'especializacao', 'talentos', 'password', 'created_at', 'updated_at'
     ];
 
     /**
@@ -32,6 +32,11 @@ class Associado extends Authenticatable
     {
         return $this->hasOne('App\Vinculo','associado_id');
     }
+    public function regras()
+    {
+        return $this->hasMany('App\RegrasAssociados', 'associado_id');
+    }
+
 
 
 

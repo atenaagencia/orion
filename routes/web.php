@@ -9,5 +9,6 @@ Route::resource('associado', 'AssociadoController');
 Route::resource('cargo', 'CargoController');
 Route::resource('vinculo', 'VinculoController');
 Route::resource('setor', 'SetorController');
+Route::resource('regras', 'RegraController');
 
 
