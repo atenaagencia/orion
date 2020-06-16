@@ -19,5 +19,9 @@ class FuncoesTableSeed extends Seeder
         DB::table('funcoes')->insert([
             'funcao' => 'Front'
         ]);
+
+        DB::table('funcoes')->insert([
+            'funcao' => 'designer ui'
+        ]);
     }
 }
