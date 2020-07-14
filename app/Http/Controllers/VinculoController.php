@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Vinculo;
+use Illuminate\Support\Facades\Auth;
+use App\LogAssociado;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 
 class VinculoController extends Controller
@@ -14,7 +17,6 @@ class VinculoController extends Controller
      */
     public function index()
     {
-      
     }
 
     /**
@@ -37,7 +39,15 @@ class VinculoController extends Controller
     {
         $query = Vinculo::create($request->all());
 
-        return redirect(route('associado.show',$request->associado_id));
+        if ($query) {
+            LogAssociado::create([
+                'vinculo_id' => $query->id,
+                'user_id' => Auth::user()->id,
+                'descricao' => 'Cadastro de Vinculo'
+            ]);
+        }
+
+        return redirect(route('associado.show', $request->associado_id));
     }
 
     /**
@@ -48,7 +58,6 @@ class VinculoController extends Controller
      */
     public function show(Vinculo $vinculo)
     {
-        //
     }
 
     /**
@@ -71,8 +80,14 @@ class VinculoController extends Controller
      */
     public function update(Request $request, Vinculo $vinculo)
     {
-        $vinculo->update($request->all());
-
+        $query = $vinculo->update($request->all());
+        if ($query) {
+            LogAssociado::create([
+                'vinculo_id' => $vinculo->id,
+                'user_id' => Auth::user()->id,
+                'descricao' => 'Alteração de Vinculo'
+            ]);
+        }
         return back();
     }
 

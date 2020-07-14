@@ -23,4 +23,8 @@ class Vinculo extends Model
     {
         return $this->belongsTo('App\Associado', 'supervisor_id');
     }
+    public function logs()
+    {
+        return $this->hasMany('App\LogAssociado', 'vinculo_id');
+    }
 }
