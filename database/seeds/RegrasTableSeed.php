@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class RegrasTableSeed extends Seeder
 {
- 
+
 
     public function run()
     {
@@ -25,6 +26,6 @@ class RegrasTableSeed extends Seeder
             ]);
         }
 
-      
+
     }
 }
